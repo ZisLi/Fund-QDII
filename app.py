@@ -27,7 +27,7 @@ fund_nasdaq = fund_nasdaq[fund_nasdaq["date"] >= "2026-02-24"]
 fund_nasdaq.reset_index(drop = True, inplace = True)
 
 # 默认 daily invest = 0
-fund_nasdaq["daily_invest"] = 0
+fund_nasdaq["daily_invest"] = 0.0
 
 # ----------- 定投规则 -----------
 fund_nasdaq.loc[fund_nasdaq["date"] >= "2026-02-24", "daily_invest"] = 20
@@ -93,7 +93,7 @@ fund_sp500 = fund_sp500[fund_sp500["date"] >= "2026-03-03"]
 fund_sp500.reset_index(drop = True, inplace = True)
 
 # 默认 daily invest = 0
-fund_sp500["daily_invest"] = 0
+fund_sp500["daily_invest"] = 0.0
 fee_rate = 0.0012
 # ----------- 定投规则 -----------
 fund_sp500.loc[fund_sp500["date"] >= "2026-03-03", "daily_invest"] = 50* (1 - fee_rate)
@@ -157,7 +157,7 @@ fund_global = fund_global[fund_global["date"] >= "2026-02-24"]
 fund_global.reset_index(drop = True, inplace = True)
 
 # 默认 daily invest = 0
-fund_global["daily_invest"] = 0
+fund_global["daily_invest"] = 0.0
 fee_rate_global = 0.0015
 # ----------- 定投规则 -----------
 fund_global.loc[fund_global["date"] >= "2026-02-24", "daily_invest"] = 10 * (1 - fee_rate_global)

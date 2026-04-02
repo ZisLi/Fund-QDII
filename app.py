@@ -169,8 +169,8 @@ fund_global.loc[fund_global["date"] >= "2026-03-30", "daily_invest"] = 25
 extra = {
     "2026-03-03": 50 * (1 - fee_rate_global),
     "2026-03-05": 30 * (1 - fee_rate_global),
-    "2026-03-18": -43.54+0.33,
-    "2026-03-19": -44.12+0.33
+    "2026-03-18": -43.54 - 0.33,
+    "2026-03-19": -44.12 - 0.33
 
 }
 
@@ -208,7 +208,6 @@ fund_global = fund_global[[ "Fund", "date", "net_value", "growth_rate(%)", "dail
 
 funds = pd.concat([fund_nasdaq, fund_sp500, fund_global], ignore_index = True)
 funds["daily profit"] = funds.groupby("Fund")["profit"].diff()
-funds.head()
 
 date = funds["date"].max()
 date_only = date.date()

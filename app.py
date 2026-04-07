@@ -164,6 +164,7 @@ fund_global.loc[fund_global["date"] >= "2026-02-24", "daily_invest"] = 10 * (1 -
 fund_global.loc[fund_global["date"] >= "2026-03-03", "daily_invest"] = 0
 fund_global.loc[fund_global["date"] >= "2026-03-24", "daily_invest"] = 50
 fund_global.loc[fund_global["date"] >= "2026-03-30", "daily_invest"] = 25
+fund_global.loc[fund_global["date"] >= "2026-04-08", "daily_invest"] = 50
 
 # ----------- 手动加仓 -----------
 extra = {

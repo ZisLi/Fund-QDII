@@ -34,6 +34,7 @@ fund_nasdaq.loc[fund_nasdaq["date"] >= "2026-02-24", "daily_invest"] = 20
 fund_nasdaq.loc[fund_nasdaq["date"] >= "2026-03-16", "daily_invest"] = 18
 fund_nasdaq.loc[fund_nasdaq["date"] >= "2026-03-23", "daily_invest"] = 27
 fund_nasdaq.loc[fund_nasdaq["date"] >= "2026-03-30", "daily_invest"] = 25
+fund_nasdaq.loc[fund_nasdaq["date"] >= "2026-04-08", "daily_invest"] = 30
 
 # ----------- 手动加仓 -----------
 extra = {
@@ -101,6 +102,7 @@ fund_sp500.loc[fund_sp500["date"] >= "2026-03-09", "daily_invest"] = 50 * (1 - f
 fund_sp500.loc[fund_sp500["date"] >= "2026-03-17", "daily_invest"] = 10 * (1 - fee_rate)
 fund_sp500.loc[fund_sp500["date"] >= "2026-03-21", "daily_invest"] = 0 * (1 - fee_rate)
 fund_sp500.loc[fund_sp500["date"] >= "2026-03-30", "daily_invest"] = 12 * (1 - fee_rate)
+fund_sp500.loc[fund_sp500["date"] >= "2026-04-08", "daily_invest"] = 20 * (1 - fee_rate)
 # ----------- 手动加仓 -----------
 extra = {
     "2026-03-27": 50 * (1 - fee_rate)

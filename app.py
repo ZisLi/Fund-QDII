@@ -162,18 +162,19 @@ fund_global.reset_index(drop = True, inplace = True)
 fund_global["daily_invest"] = 0.0
 fee_rate_global = 0.0015
 # ----------- 定投规则 -----------
-fund_global.loc[fund_global["date"] >= "2026-02-24", "daily_invest"] = 10 * (1 - fee_rate_global)
-fund_global.loc[fund_global["date"] >= "2026-03-03", "daily_invest"] = 0
-fund_global.loc[fund_global["date"] >= "2026-03-24", "daily_invest"] = 50
-fund_global.loc[fund_global["date"] >= "2026-03-30", "daily_invest"] = 25
-fund_global.loc[fund_global["date"] >= "2026-04-08", "daily_invest"] = 50
+fund_global.loc[fund_global["date"] >= "2026-02-24", "daily_invest"] = 10.00 * (1 - fee_rate_global)
+fund_global.loc[fund_global["date"] >= "2026-03-03", "daily_invest"] = 0.00
+fund_global.loc[fund_global["date"] >= "2026-03-24", "daily_invest"] = 50.00
+fund_global.loc[fund_global["date"] >= "2026-03-30", "daily_invest"] = 25.00
+fund_global.loc[fund_global["date"] >= "2026-04-08", "daily_invest"] = 50.00
 
 # ----------- 手动加仓 -----------
 extra = {
-    "2026-03-03": 50 * (1 - fee_rate_global),
-    "2026-03-05": 30 * (1 - fee_rate_global),
-    "2026-03-18": -43.54 - 0.33,
-    "2026-03-19": -44.12 - 0.33
+    "2026-03-03": 50.00 * (1 - fee_rate_global),
+    "2026-03-05": 30.00 * (1 - fee_rate_global),
+    "2026-03-18": -43.54,
+    "2026-03-19": -44.12,
+    "2026-03-19": -47.15
 
 }
 

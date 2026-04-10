@@ -35,6 +35,7 @@ fund_nasdaq.loc[fund_nasdaq["date"] >= "2026-03-16", "daily_invest"] = 18.00
 fund_nasdaq.loc[fund_nasdaq["date"] >= "2026-03-23", "daily_invest"] = 27.00
 fund_nasdaq.loc[fund_nasdaq["date"] >= "2026-03-30", "daily_invest"] = 25.00
 fund_nasdaq.loc[fund_nasdaq["date"] >= "2026-04-08", "daily_invest"] = 30.00
+fund_nasdaq.loc[fund_nasdaq["date"] >= "2026-04-13", "daily_invest"] = 20.00
 
 # ----------- 手动加仓 -----------
 extra = {

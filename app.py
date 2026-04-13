@@ -35,14 +35,12 @@ fund_nasdaq.loc[fund_nasdaq["date"] >= "2026-03-16", "daily_invest"] = 18.00
 fund_nasdaq.loc[fund_nasdaq["date"] >= "2026-03-23", "daily_invest"] = 27.00
 fund_nasdaq.loc[fund_nasdaq["date"] >= "2026-03-30", "daily_invest"] = 25.00
 fund_nasdaq.loc[fund_nasdaq["date"] >= "2026-04-08", "daily_invest"] = 30.00
-fund_nasdaq.loc[fund_nasdaq["date"] >= "2026-04-13", "daily_invest"] = 15.00
 
 # ----------- 手动加仓 -----------
 extra = {
     "2026-03-03": 200.00,
     "2026-03-05": 100.00,
-    "2026-03-20": 50.00,
-    "2026-04-13": 5.00
+    "2026-03-20": 50.00
 }
 
 for d, amt in extra.items():
@@ -105,7 +103,7 @@ fund_sp500.loc[fund_sp500["date"] >= "2026-03-17", "daily_invest"] = 10.00 * (1 
 fund_sp500.loc[fund_sp500["date"] >= "2026-03-21", "daily_invest"] = 0.00 * (1 - fee_rate)
 fund_sp500.loc[fund_sp500["date"] >= "2026-03-30", "daily_invest"] = 12.00 * (1 - fee_rate)
 fund_sp500.loc[fund_sp500["date"] >= "2026-04-08", "daily_invest"] = 20.00 * (1 - fee_rate)
-fund_sp500.loc[fund_sp500["date"] >= "2026-04-13", "daily_invest"] = 15.00 * (1 - fee_rate)
+fund_sp500.loc[fund_sp500["date"] >= "2026-04-13", "daily_invest"] = 30.00 * (1 - fee_rate)
 # ----------- 手动加仓 -----------
 extra = {
     "2026-03-27": 50.00 * (1 - fee_rate)
@@ -170,7 +168,7 @@ fund_global.loc[fund_global["date"] >= "2026-03-03", "daily_invest"] = 0.00
 fund_global.loc[fund_global["date"] >= "2026-03-24", "daily_invest"] = 50.00
 fund_global.loc[fund_global["date"] >= "2026-03-30", "daily_invest"] = 25.00
 fund_global.loc[fund_global["date"] >= "2026-04-08", "daily_invest"] = 50.00
-fund_global.loc[fund_global["date"] >= "2026-04-13", "daily_invest"] = 15.00
+fund_global.loc[fund_global["date"] >= "2026-04-13", "daily_invest"] = 30.00
 
 # ----------- 手动加仓 -----------
 extra = {
